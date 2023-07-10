@@ -1,0 +1,35 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "lldb",
+      "request": "[se3-fs] launch",
+      "name": "Launch",
+      "args": [],
+      "program": "${workspaceFolder}/se3-fs/target/debug/se3-fs",
+      "windows": {
+        "program": "${workspaceFolder}/se3-fs/target/debug/se3-fs.exe"
+      },
+      "cwd": "${workspaceFolder}/se3-fs/",
+      "stopOnEntry": false,
+      "sourceLanguages": ["rust"],
+      "sourceMap": {
+        "/rustc/*": "${env:HOME}/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rustlib/src/rust"
+      }
+    },
+    {
+      "name": "[se3-fs] (Windows) Launch",
+      "type": "cppvsdbg",
+      "request": "launch",
+      "program": "${workspaceRoot}/se3-fs/target/debug/se3-fs.exe",
+      "args": ["./Cargo.lock"],
+      "stopAtEntry": false,
+      "cwd": "${workspaceRoot}",
+      "environment": [],
+      "externalConsole": true,
+      "sourceFileMap": {
+        "/rustc/5e1a799842ba6ed4a57e91f7ab9435947482f7d8": "${env:USERPROFILE}/.rustup/toolchains/stable-x86_64-pc-windows-msvc/lib/rustlib/src/rust"
+      }
+    }
+  ]
+}
