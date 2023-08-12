@@ -1,0 +1,9 @@
+[package]
+name = "se7"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+piston_window = "0.128.0"
+piston2d-graphics = "0.43.0"
+rand = "0.8"
